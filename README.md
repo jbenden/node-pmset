@@ -35,3 +35,11 @@ Example Usage
     >
     (^C again to quit)
     >
+
+Notes
+-----
+
+If you are unable to install the module, due to errors about missing
+Xcode header files or related, then follow the source installation
+instructions and change the include path in `binding.gyp`.
+
