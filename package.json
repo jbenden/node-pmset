@@ -10,7 +10,7 @@
     "main": "pmset.js",
     "engines": {
         "node": ">=0.10.0"
-    }
+    },
     "dependencies": {},
     "devDependencies": {}
 }
