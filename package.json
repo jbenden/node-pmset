@@ -2,7 +2,7 @@
     "author": "Joseph Benden",
     "name": "pmset",
     "description": "Control OS X power management functionality.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "repository": {
         "type": "git",
         "url": "git://github.com/jbenden/node-pmset.git"
