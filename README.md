@@ -1,3 +1,4 @@
+[![NPM version](https://badge.fury.io/js/pmset.png)](http://badge.fury.io/js/pmset)
 node-pmset
 ==========
 
