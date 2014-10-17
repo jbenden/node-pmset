@@ -1,3 +1,4 @@
+[![Dependency Status](https://gemnasium.com/jbenden/node-pmset.png)](https://gemnasium.com/jbenden/node-pmset)
 [![NPM version](https://badge.fury.io/js/pmset.png)](http://badge.fury.io/js/pmset)
 node-pmset
 ==========
