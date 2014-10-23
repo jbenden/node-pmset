@@ -9,4 +9,5 @@ before_install:
   - brew update
   - npm install -g grunt-cli grunt-mocha-test
 intall: npm install
-before_script: grunt
+script:
+  - /usr/local/bin/grunt
