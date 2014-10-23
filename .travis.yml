@@ -1,10 +1,16 @@
 # Mac OS X (https://github.com/travis-ci-tester/toolchain-table)
 #
 env:
+  - CI=true
+  - TRAVIS=true
   - TRAVIS_OS_NAME=osx
-language: node_js
+language:
+  - objective-c
+  - node_js
 node_js:
   - "0.10"
-before_install: npm install -g grunt-cli grunt-mocha-test
+before_install:
+  - brew update
+  - npm install -g grunt-cli grunt-mocha-test
 intall: npm install
 before_script: grunt
