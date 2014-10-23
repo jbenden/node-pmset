@@ -1,9 +1,5 @@
 # Mac OS X (https://github.com/travis-ci-tester/toolchain-table)
 #
-env:
-  - CI=true
-  - TRAVIS=true
-  - TRAVIS_OS_NAME=osx
 language:
   - objective-c
   - node_js
