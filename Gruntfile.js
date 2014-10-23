@@ -7,7 +7,6 @@ module.exports = function(grunt) {
         mochaTest: {
             test: {
                 options: {
-                    reporter: 'spec',
                     quiet: false,
                     timeout: 10000
                 },
