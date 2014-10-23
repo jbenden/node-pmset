@@ -1,5 +1,6 @@
 # Mac OS X (https://github.com/travis-ci-tester/toolchain-table)
 #
+TRAVIS_OS_NAME: osx
 language: node_js
 node_js:
   - "0.10"
