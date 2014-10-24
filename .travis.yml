@@ -8,5 +8,5 @@ node_js:
 before_install:
   - brew update
   - npm install -g grunt-cli grunt-mocha-test
-intall: npm install
+install: npm install
 script: npm test
