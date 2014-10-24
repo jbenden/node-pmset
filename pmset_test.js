@@ -50,4 +50,3 @@ describe("Power Management functions for OS X", function(done) {
         });
     });
 });
-
