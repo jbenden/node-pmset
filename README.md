@@ -2,6 +2,7 @@
 [![Dependency Status](https://gemnasium.com/jbenden/node-pmset.png)](https://gemnasium.com/jbenden/node-pmset)
 [![NPM version](https://badge.fury.io/js/pmset.png)](http://badge.fury.io/js/pmset)
 [![Code Climate](https://codeclimate.com/github/jbenden/node-pmset/badges/gpa.svg)](https://codeclimate.com/github/jbenden/node-pmset)
+[![Coverage Status](https://coveralls.io/repos/jbenden/node-pmset/badge.png)](https://coveralls.io/r/jbenden/node-pmset)
 node-pmset
 ==========
 
