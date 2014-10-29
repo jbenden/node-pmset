@@ -49,4 +49,84 @@ describe("Power Management functions for OS X", function(done) {
             done();
         });
     });
+    it("fails with nothing passed to noSystemSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noSystemSleep();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noSystemSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noSystemSleep(123);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with nothing passed to noIdleSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noIdleSleep();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noIdleSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noIdleSleep(123);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with nothing passed to noDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDisplaySleep();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDisplaySleep(123);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with improper release value.", function (done) {
+        var isOk = 0;
+        try {
+            pmset.release("joe");
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with no release value.", function (done) {
+        var isOk = 0;
+        try {
+            pmset.release();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
 });
