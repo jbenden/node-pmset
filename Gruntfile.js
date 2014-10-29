@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-coveralls');
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         mochaTest: {
@@ -10,7 +11,13 @@ module.exports = function(grunt) {
                 },
                 src: ['**/*_test.js']
             }
+        },
+        coveralls: {
+            options: {
+                src: 'coverage/lcov.info',
+                force: false
+            }
         }
     });
-    grunt.registerTask('default', ['mochaTest']);
+    grunt.registerTask('default', ['mochaTest','coveralls']);
 };

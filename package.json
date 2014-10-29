@@ -12,12 +12,13 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover --help node_modules/.bin/_mocha -- -- *test.js"
+    "testfast": "grunt",
+    "test": "./node_modules/istanbul/lib/cli.js cover --help node_modules/.bin/_mocha -- -- *test.js"
   },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-coveralls": "^1.0.0",
     "grunt-mocha-test": "^0.12.2",
     "istanbul": "^0.3.2",
     "mocha": "^2.0.1"

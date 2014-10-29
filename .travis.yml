@@ -9,4 +9,6 @@ before_install:
   - brew update
   - npm install -g grunt-cli grunt-mocha-test
 install: npm install
-script: npm test
+script: 
+  - npm test
+  - grunt coveralls
