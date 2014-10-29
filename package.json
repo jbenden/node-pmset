@@ -13,7 +13,8 @@
   },
   "scripts": {
     "testfast": "grunt",
-    "test": "./node_modules/istanbul/lib/cli.js cover --help node_modules/.bin/_mocha -- -- *test.js"
+    "test": "./node_modules/istanbul/lib/cli.js cover --help node_modules/.bin/_mocha -- -- *test.js",
+    "coverage": "./node_modules/grunt-coveralls/node_modules/coveralls/bin/coveralls.js < coverage/lcov.info"
   },
   "dependencies": {},
   "devDependencies": {
