@@ -109,6 +109,26 @@ describe("Power Management functions for OS X", function(done) {
         ok(isOk == 1);
         done();
     });
+    it("fails with a null passed to noDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDisplaySleep(null);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with an undefined passed to noDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDisplaySleep(undefined);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
     it("fails with improper release value.", function (done) {
         var isOk = 0;
         try {
