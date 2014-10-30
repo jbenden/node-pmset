@@ -49,6 +49,48 @@ describe("Power Management functions for OS X", function(done) {
             done();
         });
     });
+    it("noUserIdleSystemSleep should return an integer value greater than 0.", function (done) {
+        id = pmset.noUserIdleSystemSleep("Testing Node.js");
+        ok(id > 0);
+        var found = false;
+        exec('pmset -g assertions', function (error, stdout, stderr) {
+            var regex = /PreventUserIdleSystemSleep named: .Testing Node\.js./g;
+            while (match = regex.exec(stdout)) {
+                found = true;
+            }
+            ok(found == true);
+            pmset.release(id);
+            done();
+        });
+    });
+    it("noUserIdleDisplaySleep should return an integer value greater than 0.", function (done) {
+        id = pmset.noUserIdleDisplaySleep("Testing Node.js");
+        ok(id > 0);
+        var found = false;
+        exec('pmset -g assertions', function (error, stdout, stderr) {
+            var regex = /PreventUserIdleDisplaySleep named: .Testing Node\.js./g;
+            while (match = regex.exec(stdout)) {
+                found = true;
+            }
+            ok(found == true);
+            pmset.release(id);
+            done();
+        });
+    });
+    it("noDiskIdle should return an integer value greater than 0.", function (done) {
+        id = pmset.noDiskIdle("Testing Node.js");
+        ok(id > 0);
+        var found = false;
+        exec('pmset -g assertions', function (error, stdout, stderr) {
+            var regex = /PreventDiskIdle named: .Testing Node\.js./g;
+            while (match = regex.exec(stdout)) {
+                found = true;
+            }
+            ok(found == true);
+            pmset.release(id);
+            done();
+        });
+    });
     it("fails with nothing passed to noSystemSleep.", function(done) {
         var isOk = 0;
         try{
@@ -123,6 +165,66 @@ describe("Power Management functions for OS X", function(done) {
         var isOk = 0;
         try{
             pmset.noDisplaySleep(undefined);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with nothing passed to noUserIdleSystemSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noUserIdleSystemSleep();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noUserIdleSystemSleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noUserIdleSystemSleep(123);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with nothing passed to noUserIdleDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noUserIdleDisplaySleep();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noUserIdleDisplaySleep.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noUserIdleDisplaySleep(123);
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with nothing passed to noDiskIdle.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDiskIdle();
+        } catch (ex) {
+            isOk = 1;
+        }
+        ok(isOk == 1);
+        done();
+    });
+    it("fails with a number passed to noDiskIdle.", function(done) {
+        var isOk = 0;
+        try{
+            pmset.noDiskIdle(123);
         } catch (ex) {
             isOk = 1;
         }
