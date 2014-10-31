@@ -48,3 +48,21 @@ If you are unable to install the module, due to errors about missing
 Xcode header files or related, then follow the source installation
 instructions and change the include path in `binding.gyp`.
 
+Methods Available
+-----------------
+
+The module supports the following methods:
+
+* (int) noIdleSleep(string)
+* (int) noDisplaySleep(string)
+* (int) noSystemSleep(string)
+* (int) noUserIdleSystemSleep(string)
+* (int) noUserIdleDisplaySleep(string)
+* (int) noDiskIdle(string)
+* release(int)
+
+To get a better understanding of what these different options mean, see
+the Apple header file `pwr_mgt/IOPMLib.h` inside of the platform SDK
+folder. Additionally, check out the local unit-tests for more information
+about the correct usage of these functions.
+ 
